@@ -15,7 +15,7 @@ export default function ConversionRow({ currencySymbol, convertRate, convertBase
         <tr className="conversion-row">
             <td>{symbol}:</td>
             <td>{rate}</td>
-            <td>{convertBase * rate}</td>
+            <td>{(!isNaN(convertBase)) ? (convertBase * rate).toFixed(2) : 'Error'}</td>
         </tr>
     )
 }

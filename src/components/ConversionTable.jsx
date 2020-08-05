@@ -31,7 +31,7 @@ export default function ConversionTable() {
                 <th>Value</th>
             </tr>
             { (conversionRates !== null) ? Object.entries(conversionRates).map(([symbol, rate]) => {
-                return <ConversionRow id={symbol} currencySymbol={symbol} convertRate={rate} convertBase={inputAmount}/>
+                return <ConversionRow id={symbol} currencySymbol={symbol} convertRate={rate.toFixed(2)} convertBase={inputAmount}/>
             }) : <span>Loading</span>}
         </table>
         </div>
