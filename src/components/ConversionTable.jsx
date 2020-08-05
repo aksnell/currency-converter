@@ -21,14 +21,15 @@ export default function ConversionTable() {
     return (
         <div className="conversion-table">
         <form>
-            <label for='base'>USD:</label>
-            <input type='text' id='base' name='base' value={inputAmount} target="_self" onInput={handleInput}></input>
+            <label className="conversion-table-label" for='base'><strong>USD:</strong></label>
+            <input className="conversion-table-input" type='text' id='base' name='base' value={inputAmount} target="_self" onInput={handleInput}></input>
         </form>
         <table>
-            <tr>
-                <th>Symbol</th>
-                <th>Rate</th>
-                <th>Value</th>
+            <caption>USD Conversion Chart</caption>
+            <tr className="conversion-table-headers">
+                <th className="conversion-table-header">Symbol</th>
+                <th className="conversion-table-header">Rate</th>
+                <th className="conversion-table-header">Value</th>
             </tr>
             { (conversionRates !== null) ? Object.entries(conversionRates).map(([symbol, rate]) => {
                 return <ConversionRow id={symbol} currencySymbol={symbol} convertRate={rate.toFixed(2)} convertBase={inputAmount}/>

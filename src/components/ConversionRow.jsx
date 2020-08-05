@@ -13,9 +13,9 @@ export default function ConversionRow({ currencySymbol, convertRate, convertBase
 
     return (
         <tr className="conversion-row">
-            <td>{symbol}:</td>
-            <td>{rate}</td>
-            <td>{(!isNaN(convertBase)) ? (convertBase * rate).toFixed(2) : 'Error'}</td>
+            <td className="conversion-data">{symbol}:</td>
+            <td className="conversion-data">{rate}</td>
+            <td className="conversion-data">{(!isNaN(convertBase)) ? (convertBase * rate).toFixed(2) : 'Error'}</td>
         </tr>
     )
 }

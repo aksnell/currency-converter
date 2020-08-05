@@ -4,9 +4,42 @@
 
 html {
   height: 100%;
+  background-color: #cccccc;
 }
 
 body {
   margin: 0;
   min-height: 100%;
+}
+
+
+
+.conversion-table {
+  display: flex;
+  flex-flow: column nowrap;
+  width: fit-content;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #333333;
+  border-radius: 0.5rem;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  background-color: #ffffff;
+}
+
+caption {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  text-align: start;
+}
+
+.conversion-table form {
+  margin-bottom: 1rem;
+}
+
+.conversion-table-header {
+  text-align: start;
+}
+
+.conversion-table-data {
+  text-align: start;
 }
