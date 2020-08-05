@@ -12,10 +12,10 @@ export default function ConversionRow({ currencySymbol, convertRate, convertBase
     }, [])
 
     return (
-        <div className="conversion-row">
-            <span>{symbol}:</span>
-            <span>{rate}</span>
-            <span>{convertBase * rate}</span>
-        </div>
+        <tr className="conversion-row">
+            <td>{symbol}:</td>
+            <td>{rate}</td>
+            <td>{convertBase * rate}</td>
+        </tr>
     )
 }
