@@ -14,11 +14,15 @@ export default function ConversionTable() {
         })
     }, [])
 
+    const handleInput = (e) => {
+        setInputAmount(e.target.value)
+    }
+
     return (
         <div className="conversion-table">
         <form>
             <label for='base'>USD:</label>
-            <input type='text' id='base' name='base' value={inputAmount} target="_self"></input>
+            <input type='text' id='base' name='base' value={inputAmount} target="_self" onInput={handleInput}></input>
         </form>
         <table>
             <tr>
